@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,11 +16,10 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:fontFamily="cursive"
             android:text="José Casimiro Pereira"
-            android:textSize="30sp"
-            android:layout_gravity="center"
-            />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView_information"
@@ -47,13 +45,22 @@
             android:layout_gravity="center"
             android:text="@string/button" />
 
-        <TextView
-            android:id="@+id/textView_cv"
+        <ScrollView
+            android:id="@+id/show_CV"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cv" />
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
-
+            <TextView
+                android:id="@+id/textView_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.0"
+                android:padding="10dp"
+                android:text="@string/cv"
+                android:textAlignment="textStart"
+                android:visibility="visible" />
+        </ScrollView>
 
 
     </LinearLayout>
